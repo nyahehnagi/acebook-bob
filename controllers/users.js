@@ -30,13 +30,19 @@ const UsersController = {
     req.body.password = hash
 
     const user = new User(req.body);
+    console.log("just before the user is saved to db")
     user.save((err) => {
       if (err) {
-        throw err;
+        console.log("error exists")
+        console.log("this is the error message:", err.message)
+        // console.log("this is the error:",err)
+        // throw err;
+        res.render("users/new", {title: "Acebook - Sign up", duplicate: true});
       }
-      req.session.user = user;
-     
-      res.status(201).redirect("/posts");
+      if (!err) {
+        req.session.user = user;
+        res.status(201).redirect("/posts");
+      }
     });
   },
 
