@@ -1,0 +1,18 @@
+<h1 class="profile">Users found for "Luc"</h1>
+
+<ul class="users">
+  {{#each users}}
+  <li>
+    {{this.name}}
+    <form id="selectUser" action="/users/{{this.id}}" method="get">
+
+
+    <!-- <a class="btn nav-link" id="view-profile" href="/users/{{userid}}">My Profile</a> -->
+
+
+      <input type="submit" id="submitSelect" value="Select">
+    </form>
+  </li>
+
+  {{/each}}
+</ul>

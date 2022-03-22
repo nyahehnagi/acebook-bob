@@ -41,30 +41,42 @@ const UsersController = {
   },
   
   Search: (req, res) => {
-
+ 
     console.log("trying to search users" );
-    //const searchuser = req.body.searchuser;
-    //console.log("with the search string of " searchuser);
     const searchuser = req.params.search;
     //req.params.id
-    console.log('with search string of ' +searchuser);
-    
-    // User.find(
-    //   { "authors": /Alex/i }, 
-    //   function(err,docs) { 
-  
+    //console.log('with search string of ' +searchuser);
+    console.log('with req.body.search: ' +req.body.search);
+    console.log('with req.params: ' +req.params);
+    console.log('with req.params.search: ' +req.params.search);
+    console.log('with params.search: ' +params.search);
+
+    // User.find({ "name": { "$regex": "Tru", "$options": "i" }},
+    //   function(err,users) { 
+    //     console.log(users);
     //   }
-  
 
-    User.find(
-      { "name": { "$regex": "Luc", "$options": "i" } },
-      function(err,users) { 
-        console.log(users);
-      }
-
-      //THIS IS LOOPING, BUT RETURNING BACK what I would EXPECT
+    //   //THIS IS LOOPING, BUT RETURNING BACK what I would EXPECT
       
-    ); 
+    // ); 
+
+    User.find({ "name": { "$regex": "Luc", "$options": "i" }}).then((users) => { 
+      console.log(users)
+      res.render("users/userList", { users: users, userid: req.session.user._id, user: req.session.user});
+    })
+    //THIS IS LOOPING, BUT RETURNING BACK what I would EXPECT
+    
+  //}); 
+
+    // User.findOne({ _id: req.session.user._id }).then((user) => {
+    //   user.posts.push(post._id)
+    //   user.save((err) => {
+    //     if (err) {
+    //       throw err
+    //     }
+    //   })
+    // })
+
 
     //   res.render("posts/index", { posts: posts, userid: req.session.user._id, user: req.session.user});
     // });
