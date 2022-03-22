@@ -1,0 +1,12 @@
+<ul class="users">
+  {{#each users}}
+  <li>
+    {{this.message}}
+    <form id="likeForm" action="/posts/{{this.id}}?like=true" method="post">
+      <input type="submit" id="submitSelect" value="Choose">
+    </form>
+  </li>
+
+  {{/each}}
+</ul>
+

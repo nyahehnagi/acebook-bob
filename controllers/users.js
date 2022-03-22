@@ -39,7 +39,45 @@ const UsersController = {
       res.status(201).redirect("/posts");
     });
   },
+  
+  Search: (req, res) => {
 
+    console.log("trying to search users" );
+    //const searchuser = req.body.searchuser;
+    //console.log("with the search string of " searchuser);
+    const searchuser = req.params.search;
+    //req.params.id
+    console.log('with search string of ' +searchuser);
+    
+    // User.find(
+    //   { "authors": /Alex/i }, 
+    //   function(err,docs) { 
+  
+    //   }
+  
+
+    User.find(
+      { "name": { "$regex": "Luc", "$options": "i" } },
+      function(err,users) { 
+        console.log(users);
+      }
+
+      //THIS IS LOOPING, BUT RETURNING BACK what I would EXPECT
+      
+    ); 
+
+    //   res.render("posts/index", { posts: posts, userid: req.session.user._id, user: req.session.user});
+    // });
+
+
+    // User.find({_name: req.params.id })
+    // .populate({
+    //     path : 'teachers' , 
+    //     match : { username : "bob" }
+    //  })
+    //  .exec(callback);
+
+  },
 };
 
 module.exports = UsersController;

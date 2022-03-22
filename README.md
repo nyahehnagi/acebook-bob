@@ -56,6 +56,12 @@ so I can exit mmy account
 I want to log out
 ~~~~
 
+~~~~
+As a user of Acebook
+so I can reunite with old friends
+I want to search for a user
+~~~~
+
 -----------------------
 
 This is a Node.js template for the Acebook engineering project.
