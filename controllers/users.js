@@ -62,22 +62,31 @@ const UsersController = {
 
   Create: (req, res) => {
 
-    const hash = bcrypt.hashSync(req.body.password, saltRounds);
-    req.body.password = hash
+    //Check for dupicate
+    User.findOne({ email: req.body.email }).then((userexists) => {
+      if (userexists) { return res.status(404).send("Email "+req.body.email+" already registered for Acebook-Makerverse") } 
+    //End check for duplicate
 
-    const user = new User(req.body);
+      const hash = bcrypt.hashSync(req.body.password, saltRounds);
+      req.body.password = hash
 
-    user.profilePic.data = fs.readFileSync('./public/images/blank_profile.jpg')
-    user.profilePic.contentType = 'image/jpeg'
+      const user = new User(req.body);
 
-    user.save((err) => {
-      if (err) {
-        throw err;
-      }
-      req.session.user = user;
-     
-      res.status(201).redirect("/posts");
-    });
+      user.profilePic.data = fs.readFileSync('./public/images/blank_profile.jpg')
+      user.profilePic.contentType = 'image/jpeg'
+
+      user.save((err) => {
+        if (err) {
+          throw err;
+        }
+        req.session.user = user;
+      
+        res.status(201).redirect("/posts");
+      });
+    })
+    .catch((err) => {
+      res.status(404).send(`Error - ${err}`)
+    })  
   },
 
 };
