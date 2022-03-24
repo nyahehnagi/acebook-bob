@@ -1,7 +1,7 @@
 <ul class="list-group" id="posts">
   {{#each posts}}
   <li>
-    <div class="card" style="width: 25rem;">
+    <div class="card">
       <div class="card-body">
         <a id="postedByLink" href="/users/{{this.userObjectId.id}}">{{this.userObjectId.name}}</a>
         <p class="card-text">{{this.message}}</p>

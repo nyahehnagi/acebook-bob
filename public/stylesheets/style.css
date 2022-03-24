@@ -105,3 +105,16 @@ body {
 #postedByLink:hover {
   color: #679491
 }
+
+#timeline {
+  text-align: center;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    width: 70rem;
+}
