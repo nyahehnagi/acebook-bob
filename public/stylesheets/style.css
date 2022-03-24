@@ -18,12 +18,19 @@ body {
 
 #post-message-box {
   text-align: center;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+  width: 50rem;
+  border-radius: 20px;
 }
 
 /*box for posting a status*/
 #message {
   width: 25rem;
   height: 2rem;
+  border-radius: 5px;
+  border: solid #679491;
 }
 
 #comments {
@@ -176,4 +183,5 @@ ul {
     float: none;
     margin-bottom: 10px;
     width: 70rem;
+    border-radius: 20px;
 }
