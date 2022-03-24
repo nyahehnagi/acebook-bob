@@ -69,7 +69,6 @@ const UsersController = {
     User.
       findOne({_id: req.params.id }).
       populate('friends').
-      populate('posts').
       exec (function (err, user){
         if (err) throw err;
         if (!user) { return res.status(404).send("Not Found") } 
@@ -78,11 +77,19 @@ const UsersController = {
           if (friend.id == sessionUserId){showAddFriend = false}
         })
 
-        user.posts.forEach((post) => {
-          post.createdOnPretty = post.formatDate(post.createdAt)
-        })
-
-        res.render("users/show", { user: user, posts: user.posts, users: user.friends , showAddFriend : showAddFriend });
+        Post.
+          find().
+          where('_id').in(user.posts).
+          populate('userObjectId').
+          populate('comments.commenterId').
+          exec((err, posts) => {
+          if (err) throw err;
+          posts.forEach((post) => {
+            post.createdOnPretty = post.formatDate(post.createdAt)
+          })
+          res.render("users/show", { user: user, posts: posts, users: user.friends , showAddFriend : showAddFriend });
+        });
+        
       })
 
   },

@@ -33,7 +33,7 @@
         <div id="flush-collapseOne{{this.id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample{{this.id}}">
           <div class="accordion-body">    
             <div class="comments">
-              {{#each comments}}
+              {{#each this.comments}}
               <div id="comments">
                 <img id="comment-profile-pic" src="{{this.commenterId.profilePicLocation}}" class="shrinkToFit" style="border-radius: 50%" width="30" height="30">
                <a id="commented-by-link" href="/users/{{this.commenterId.id}}">{{this.commenterId.name}}</a> 

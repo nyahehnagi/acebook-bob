@@ -294,9 +294,16 @@ ul {
 }
 
 #update-profile-pic {
-  background-color: #045049;
-  color: azure;
-  margin-left: -100px;
+  font-size: medium;
+  margin-top: 30px;
+  color: #045049;
+  text-align: center;
+}
+
+#pic-uploader-button {
+  margin-top: 10px;
+  margin-left: 130px;
+  margin-right: auto;
 }
 
 #friend-profile {
@@ -304,4 +311,12 @@ ul {
   font-size: medium;
   color: #045049;
   text-decoration: none;
+}
+
+#add-friend {
+  background-color: #045049;
+  color: azure;
+}
+#add-friend:hover {
+  background-color: #78a5a1;
 }
