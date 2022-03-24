@@ -9,7 +9,7 @@ describe("Add Friend", () => {
       // Sign another user up
       cy.signUpSecondUser()
 
-      cy.get("#postedByLink").first().click();
+      cy.get("#posted-by-link").first().click();
 
       cy.get("#add-friend").should("have.attr", 'value',  "Add Friend");
   
@@ -31,7 +31,7 @@ describe("Add Friend", () => {
     // Sign another user up
     cy.signUpSecondUser()
 
-    cy.get("#postedByLink").first().click();
+    cy.get("#posted-by-link").first().click();
     cy.get("#add-friend-form").submit();
     cy.get('#add-friend-form').should('not.exist');
 

@@ -14,7 +14,7 @@ describe("Timeline", () => {
     cy.get("#new-post-form").submit();
 
     cy.get("#posts").should("contain", "Hello, world!");
-    cy.get("#postedBy").should("contain", "test name");
+    cy.get("#posted-by-link").should("contain", "test name");
 
     // 1. Extract date/time from page in variable
     cy.get('#createdAt').then(($createdAt) => {
@@ -47,7 +47,7 @@ describe("Timeline", () => {
 
     cy.get("#new-post-form").find('[type="text"]').type("Hello, world!");
     cy.get("#new-post-form").submit();
-    cy.get('#postedByLink').eq(0).click()
+    cy.get('#posted-by-link').eq(0).click()
 
     cy.get("#profile").should("contain", "test name");
   })
