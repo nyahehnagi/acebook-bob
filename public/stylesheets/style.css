@@ -4,10 +4,6 @@ body {
   background-color: #04504817;
 }
 
-a {
-  color: azure;
-}
-
 .accordion-item {
   align-items: flex-end;
 }
@@ -21,6 +17,10 @@ a {
 
 #numberOfLikes {
   display: inline-block;
+}
+
+#navbar-title {
+  color: azure;
 }
 
 #navbar-title:hover {
@@ -95,4 +95,13 @@ a {
 }
 #view-profile:hover {
   color: #aef0de;
+}
+
+#postedByLink {
+  font-size: x-large;
+  color: #045049;
+  text-decoration: none;
+}
+#postedByLink:hover {
+  color: #679491
 }
