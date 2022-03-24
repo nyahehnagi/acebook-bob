@@ -33,6 +33,11 @@ body {
   border: solid #679491;
 }
 
+.card-text {
+  font-size: large;
+  margin-top: 12px;
+}
+
 #comments {
   color:#045049;
   border: 2.75px solid #679491; 
@@ -45,7 +50,7 @@ body {
   width: 63rem;
 }
 #createdAt {
-  color:green
+  color:#045049
 }
 
 #numberOfLikes {

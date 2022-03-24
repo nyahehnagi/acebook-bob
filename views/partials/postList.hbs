@@ -14,8 +14,9 @@
       <div class="card-body">
         <a id="posted-by-link" href="/users/{{this.userObjectId.id}}">{{this.userObjectId.name}}</a>
         <p class="card-text">{{this.message}}</p>
+        <div id="createdAt">{{this.createdOnPretty}}</div>
     <br>
-    Posted at: <div id="createdAt">{{this.createdOnPretty}}</div>
+    {{!-- Posted at: <div id="createdAt">{{this.createdOnPretty}}</div> --}}
             <form id="likeForm" action="/posts/{{this.id}}?like=true" method="post">
                 <input type="submit" id="submitLike" value="Like">
                 <p id="numberOfLikes">{{this.likes.length}}</p>
