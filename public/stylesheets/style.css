@@ -53,6 +53,7 @@ body {
   font-size: large;
   margin-top: 12px;
   margin-bottom: 10px;
+  margin-left: 60px;
 }
 
 #comments {
@@ -72,6 +73,8 @@ body {
 
 #numberOfLikes {
   display: inline-block;
+  font-weight: bolder;
+  color: #045049;
 }
 
 #navbar-title {
@@ -138,6 +141,7 @@ body {
 #submitLike {
   background-color: #045049;
   color: azure;
+  border-radius: 50%;
 }
 #submitLike:hover {
   background-color: #78a5a1;
