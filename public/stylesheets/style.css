@@ -68,7 +68,8 @@ body {
   width: 63rem;
 }
 #createdAt {
-  color:#045049
+  color:#045049;
+  display: inline-block;
 }
 
 #numberOfLikes {
@@ -187,9 +188,14 @@ body {
   color: #aef0de;
 }
 
+#post-profile-pic {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
 #posted-by-link {
   font-weight: bold;
-  position: absolute;
+  /* position: absolute; */
   margin-top: 35px;
   margin-left: 10px;
   font-size: x-large;
