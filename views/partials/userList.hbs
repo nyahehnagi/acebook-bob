@@ -1,8 +1,8 @@
 <ul class="list-group" id="users">
   {{#each users}}
   <p id="user">
-    <img id="profile-pic" src="{{this.profilePicLocation}}" class="shrinkToFit" style="border-radius: 50%" width="50" height="50">
-    <a id="view-profile" class="link-dark" href="/users/{{this._id}}">{{this.name}}</a>
+    <img id="post-profile-pic" src="{{this.profilePicLocation}}" class="shrinkToFit" style="border-radius: 50%" width="50" height="50">
+    <a id="view-friend-profile" class="link-dark" href="/users/{{this._id}}">{{this.name}}</a>
   </p>
   {{/each}}
 </ul>

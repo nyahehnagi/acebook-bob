@@ -320,3 +320,9 @@ ul {
 #add-friend:hover {
   background-color: #78a5a1;
 }
+
+#view-friend-profile {
+  font-size: medium;
+  color: #045049;
+  text-decoration: none;
+}
