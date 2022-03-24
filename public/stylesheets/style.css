@@ -36,6 +36,13 @@ body {
   border-radius: 5px;
   border: solid #679491;
 }
+#commentMessage {
+  width: 25rem;
+  height: 2rem;
+  border-radius: 10px;
+  margin-left: 35px;
+  border: solid #679491;
+}
 
 /* #likeForm, #accordion-parent {
   display:inline-block;
@@ -49,6 +56,7 @@ body {
 .card-text {
   font-size: large;
   margin-top: 12px;
+  margin-bottom: 10px;
 }
 
 #comments {
@@ -116,6 +124,10 @@ body {
 }
 
 #submit {
+  background-color: #045049;
+  color: azure;
+}
+#submitComment {
   background-color: #045049;
   color: azure;
 }

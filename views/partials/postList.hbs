@@ -2,8 +2,8 @@
   <div class="card-body">
     <form class="form-group" id="new-post-form" action="/posts" method="post">
       <a id="posted-by-link" href="/users/{{user._id}}">{{user.name}}</a>
-      <input id="message" type="text" name="message" placeholder="Share your thoughts with the Makerverse" value="">
-      <input class="btn" type="submit" id="submit" value="Submit">
+      <input id="message" type="text" name="message" placeholder="  Share your thoughts with the Makerverse..." value="">
+      <input class="btn" type="submit" id="submit" value="Post">
     </form> 
   </div>
 </div>
@@ -41,8 +41,8 @@
             </div>
               <br>
             <form id="new-comment-form" action="/posts/{{this.id}}" method="post">
-              <input id="commentMessage" type="text" name="commentMessage" value="" placeholder="Write a comment...">
-              <input type="submit" id="submitComment" value="Post" onClick="window.location.reload();">
+              <input id="commentMessage" type="text" name="commentMessage" placeholder="  Write a comment..." value=""> 
+              <input class="btn" type="submit" id="submitComment" value="Post" onClick="window.location.reload();">
             </form>
           </div>
         </div>
