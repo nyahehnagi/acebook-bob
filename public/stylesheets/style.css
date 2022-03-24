@@ -47,7 +47,6 @@ body {
 #welcome-user {
   color: azure;
   cursor: default;
-  /* margin-left: 60%; */
   text-align: right;
   width: 41rem
 }

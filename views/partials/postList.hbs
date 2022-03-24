@@ -1,11 +1,11 @@
 <div class="card">
-      <div class="card-body">
-<form class="form-group" id="new-post-form" action="/posts" method="post">
-  <label for="message">Name </label>
-  <input id="message" type="text" name="message" placeholder="Share your thoughts with the Makerverse" value="">
-  <input class="btn btn-primary" type="submit" value="Submit">
-</form> 
-</div>
+  <div class="card-body">
+    <form class="form-group" id="new-post-form" action="/posts" method="post">
+      <a id="posted-by-link" href="/users/{{user._id}}">{{user.name}}</a>
+      <input id="message" type="text" name="message" placeholder="Share your thoughts with the Makerverse" value="">
+      <input class="btn btn-primary" type="submit" value="Submit">
+    </form> 
+  </div>
 </div>
 <ul class="list-group" id="posts">
   {{#each posts}}
