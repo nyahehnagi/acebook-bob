@@ -230,3 +230,43 @@ ul {
     width: 70rem;
     border-radius: 20px;
 }
+
+#profile {
+  color: #045049;
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* .form-control-file {
+  background-color: #045049;
+  color: azure;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+} */
+
+/* #upload-file {
+  background-color: #045049;
+  color: azure;
+} */
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 28%;
+}
+
+#profile-pic {
+  border-radius: 50%;
+}
+
+.form-group {
+  text-align: center;
+}
+
+#update-profile-pic {
+  background-color: #045049;
+  color: azure;
+  margin-left: -100px;
+}
