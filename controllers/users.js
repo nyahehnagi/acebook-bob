@@ -89,8 +89,7 @@ const UsersController = {
 
   Upload: (req, res) => {
     User.findOne({ _id: req.session.user._id }).then((user) => {
-
-      console.log(req.body.profile_pic)
+      
       user.profilePicLocation = req.body.profile_pic
 
       user.save((err) => {
