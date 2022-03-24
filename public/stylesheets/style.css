@@ -17,7 +17,7 @@ body {
 }
 
 #comments {
-  color:red;
+  color:#045049;
   border: 2.75px solid #679491; 
   border-radius: 15px;
   padding: 10px;
@@ -109,13 +109,28 @@ body {
   color: #aef0de;
 }
 
-#postedByLink {
+#posted-by-link {
   font-size: x-large;
   color: #045049;
   text-decoration: none;
 }
-#postedByLink:hover {
+#posted-by-link:hover {
   color: #679491
+}
+
+#commented-by-link {
+  font-size: large;
+  color: #045049;
+  text-decoration: none;
+  font-weight: bold;
+}
+#commented-by-link:hover {
+  color: #679491;  
+}
+
+#comment-message {
+  font-size: medium;
+  margin-left: 0.5%;
 }
 
 #timeline {
