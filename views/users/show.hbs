@@ -4,11 +4,12 @@
   <tr>
     <td>
     <div>
-      <img id="profile-pic" src="data:image/{{user.profilePic.contentType}};base64,{{base64 user.profilePic.data}}" class="shrinkToFit" width="360" height="360">
-      <h4>Upload Image</h4>
-      <form class="form-group" action="/users/upload/" enctype="multipart/form-data" method="POST">
-          <input type="file" class="form-control-file" name="image" accept="image/*">
-          <input type="submit" class="btn btn-primary" value="Upload Photo">
+      
+      <img id="profile-pic" src="{{user.profilePicLocation}}" class="shrinkToFit" width="360" height="360">
+      <h6>Upload Image</h6>
+      <form class="form-group" action="/users/upload/" method="POST">
+          <input type="hidden" name="profile_pic" id="profile_pic_uploader" class="simple-file-upload" data-width="50" data-height="50" data-accepted="image/jpeg" resize-method="crop"  data-resize-width="500" data-resize-height="500" >
+          <input type="submit" id="profile_pic_submit" class="btn btn-primary" value="Upload Photo" style="visibility: hidden;">
       </form>
     </div>
     </td>
@@ -26,3 +27,9 @@
 <h1>Timeline</h1>
 {{> postList }}
 
+<script>
+document.getElementById("profile_pic_uploader").addEventListener("fileUploadSuccess", function (e) {
+    console.log("File Uploaded")
+    document.getElementById("profile_pic_submit").click();
+});
+</script>
