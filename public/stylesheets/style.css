@@ -27,6 +27,14 @@ a {
   color: #aef0de;
 }
 
+#search-button {
+  background-color: #78a5a1;
+  color: #045049;
+}
+#search-button:hover {
+  color: #ffffff;
+}
+
 #title {
   color:#045049;
   font-size: 100px;
@@ -37,6 +45,7 @@ a {
 
 #welcome-message {
   text-align: center;
+  font-size: medium;
 }
 
 #modalSignin {
@@ -60,15 +69,30 @@ a {
 #home {
   color: azure;
 }
+#home:hover {
+  color: #aef0de;
+}
 #signup {
   color:azure;
+}
+#signup:hover {
+  color: #aef0de;
 }
 #login {
   color: azure;
 }
+#login:hover {
+  color: #aef0de;
+}
 #logout {
   color: azure;
 }
+#logout:hover {
+  color: #aef0de;
+}
 #view-profile {
   color: azure;
+}
+#view-profile:hover {
+  color: #aef0de;
 }
