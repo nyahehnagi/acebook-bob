@@ -16,10 +16,10 @@ describe("Timeline", () => {
     cy.get("#posts").should("contain", "Hello, world!");
     cy.get("#postedBy").should("contain", "test name");
 
-    // 1. Extract date/time from page in variable
+    // Extract date/time from page in variable
     cy.get('#createdAt').then(($createdAt) => {
       const timeSincePosted = parseInt($createdAt.text().slice(0, -1));
-      // 5. Check if less than 10 seconds
+      // Check if less than 10 seconds
       cy.wrap(timeSincePosted).should('be.lt', 10);
     });
 
