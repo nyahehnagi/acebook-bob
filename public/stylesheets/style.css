@@ -5,11 +5,23 @@ body {
 }
 
 .accordion-item {
-  align-items: flex-end;
+  margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    margin-left: 280%;
+    width: 12rem;
+}
+.accordion-body {
+  width: 70rem;
+  margin-left: -472%;
 }
 
 #comments {
-  color:red
+  color:red;
+  border: 2.75px solid #679491; 
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 5px;
 }
 #createdAt {
   color:green
@@ -110,6 +122,10 @@ body {
   text-align: center;
   margin-top: 1.5%;
   margin-bottom: 1.5%;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .card {
