@@ -37,6 +37,7 @@ body {
 
 #navbar-title {
   color: azure;
+  margin-left: -12%;
 }
 
 #navbar-title:hover {
@@ -57,6 +58,10 @@ body {
   font-family: 'monospace', 'monaco';
   margin-top: 4%;
   text-align: center;
+  margin-right: 3%;
+}
+#title-writing {
+  margin-left: -6.75%;
 }
 
 #welcome-message {
