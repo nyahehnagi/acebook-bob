@@ -5,11 +5,15 @@ body {
 }
 
 .accordion-item {
-  margin: 0 auto;
+    margin: 0 auto;
     float: none;
     margin-bottom: 10px;
     margin-left: 280%;
     width: 12rem;
+    border: #ffffff;
+}
+#accordion-collapse {
+  margin-left: -420%;
 }
 .accordion-body {
   width: 70rem;
@@ -31,6 +35,15 @@ body {
   height: 2rem;
   border-radius: 5px;
   border: solid #679491;
+}
+
+/* #likeForm, #accordion-parent {
+  display:inline-block;
+} */
+
+#likeForm {
+  margin-top: 15px;
+  position: absolute;
 }
 
 .card-text {
