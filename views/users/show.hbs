@@ -8,7 +8,7 @@
       <img id="profile-pic" src="{{user.profilePicLocation}}" class="shrinkToFit" width="360" height="360">
       <h6>Upload Image</h6>
       <form class="form-group" action="/users/upload/" method="POST">
-          <input type="hidden" name="profile_pic" id="profile_pic_uploader" class="simple-file-upload" data-width="50" data-height="50" data-accepted="image/jpeg">
+          <input type="hidden" name="profile_pic" id="profile_pic_uploader" class="simple-file-upload" data-width="50" data-height="50" data-accepted="image/jpeg" resize-method="crop"  data-resize-width="360" data-resize-height="360" >
           <input type="submit" id="profile_pic_submit" class="btn btn-primary" value="Upload Photo" style="visibility: hidden;">
       </form>
     </div>
