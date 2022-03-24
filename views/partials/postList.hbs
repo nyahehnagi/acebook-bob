@@ -1,3 +1,12 @@
+<div class="card">
+      <div class="card-body">
+<form class="form-group" id="new-post-form" action="/posts" method="post">
+  <label for="message">Name </label>
+  <input id="message" type="text" name="message" placeholder="Share your thoughts with the Makerverse" value="">
+  <input class="btn btn-primary" type="submit" value="Submit">
+</form> 
+</div>
+</div>
 <ul class="list-group" id="posts">
   {{#each posts}}
   <li>
@@ -5,12 +14,6 @@
       <div class="card-body">
         <a id="posted-by-link" href="/users/{{this.userObjectId.id}}">{{this.userObjectId.name}}</a>
         <p class="card-text">{{this.message}}</p>
-        {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
-      <div>
-      {{!-- <p class="h6" id="postedBy"> 
-        <a id="postedByLink" class="link-dark" href="/users/{{this.userObjectId.id}}">{{this.userObjectId.name}}</a>
-      </p> --}}
-    </div>
     <br>
     Posted at: <div id="createdAt">{{this.createdAt}}</div>
             <form id="likeForm" action="/posts/{{this.id}}?like=true" method="post">
