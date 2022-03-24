@@ -12,7 +12,7 @@
   <li>
     <div class="card">
       <div class="card-body">
-        <img id="post-profile-pic" src="data:image/{{this.userObjectId.profilePic.contentType}};base64,{{base64 this.userObjectId.profilePic.data}}" class="shrinkToFit" style="border-radius: 50%" width="50" height="50">
+        <img id="post-profile-pic" src="{{this.userObjectId.profilePicLocation}}" class="shrinkToFit" style="border-radius: 50%" width="50" height="50">
         <a id="posted-by-link" href="/users/{{this.userObjectId.id}}">{{this.userObjectId.name}}</a>
         <div id="createdAt">{{this.createdOnPretty}}</div>
         <p class="card-text">{{this.message}}</p>
@@ -35,7 +35,7 @@
             <div class="comments">
               {{#each comments}}
               <div id="comments">
-                <img id="comment-profile-pic" src="data:image/{{this.commenterId.profilePic.contentType}};base64,{{base64 this.commenterId.profilePic.data}}" class="shrinkToFit" style="border-radius: 50%" width="30" height="30">
+                <img id="comment-profile-pic" src="{{this.commenterId.profilePicLocation}}" class="shrinkToFit" style="border-radius: 50%" width="30" height="30">
                <a id="commented-by-link" href="/users/{{this.commenterId.id}}">{{this.commenterId.name}}</a> 
                <nobr id="comment-message" >{{this.message}}</nobr>
               </div>

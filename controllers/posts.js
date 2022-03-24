@@ -1,9 +1,5 @@
 const Post = require('../models/post')
 const User = require('../models/user')
-// const TimeAgo = require('javascript-time-ago')
-// const en = require('javascript-time-ago/locale/en.json')
-// TimeAgo.addDefaultLocale(en)
-
 
 const PostsController = {
   Index: (req, res) => {
