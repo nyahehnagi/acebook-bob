@@ -127,9 +127,24 @@ body {
   background-color: #045049;
   color: azure;
 }
+#submit:hover {
+  background-color: #78a5a1;
+}
+
 #submitComment {
   background-color: #045049;
   color: azure;
+}
+#submitComment:hover {
+  background-color: #78a5a1;
+}
+
+#submitLike {
+  background-color: #045049;
+  color: azure;
+}
+#submitLike:hover {
+  background-color: #78a5a1;
 }
 
 #signup-button:hover {
