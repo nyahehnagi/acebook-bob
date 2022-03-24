@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema({
   name: String,
   posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }],
   friends: Array,
-  profilePic:{data:Buffer,contentType: String},
+  profilePicLocation: String,
 })
 
 const User = mongoose.model('User', UserSchema)

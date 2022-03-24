@@ -12,6 +12,8 @@
   <li>
     <div class="card">
       <div class="card-body">
+        {{log this.userObjectId.profilePic.contentType}}
+        {{log base64 this.userObjectId.profilePic.data}}
         <img id="post-profile-pic" src="data:image/{{this.userObjectId.profilePic.contentType}};base64,{{base64 this.userObjectId.profilePic.data}}" class="shrinkToFit" style="border-radius: 50%" width="50" height="50">
         <a id="posted-by-link" href="/users/{{this.userObjectId.id}}">{{this.userObjectId.name}}</a>
         <div id="createdAt">{{this.createdOnPretty}}</div>

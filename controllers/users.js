@@ -88,14 +88,10 @@ const UsersController = {
   },
 
   Upload: (req, res) => {
-    console.log("Inside Upload")
-
     User.findOne({ _id: req.session.user._id }).then((user) => {
-
-      user.profilePic.data = fs.readFileSync(path.join('./uploads/' + req.file.filename))
       
-      user.profilePic.contentType = 'image/jpeg'
-    
+      user.profilePicLocation = req.body.profile_pic
+
       user.save((err) => {
         if (err) {
           throw err
@@ -116,8 +112,7 @@ const UsersController = {
 
     const user = new User(req.body);
 
-    user.profilePic.data = fs.readFileSync('./public/images/blank_profile.jpg')
-    user.profilePic.contentType = 'image/jpeg'
+    user.profilePicLocation = "https://cdn-y0enty0e.files-simplefileupload.com/static/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc21EIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0c88e49f496491f7afc336cf8ad2ad64a3a8ac3a/blank_profile.jpg"
 
     user.save((err) => {
       if (err) {
