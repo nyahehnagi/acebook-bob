@@ -16,6 +16,16 @@ body {
   margin-left: -472%;
 }
 
+#post-message-box {
+  text-align: center;
+}
+
+/*box for posting a status*/
+#message {
+  width: 25rem;
+  height: 2rem;
+}
+
 #comments {
   color:#045049;
   border: 2.75px solid #679491; 

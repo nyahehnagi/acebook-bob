@@ -1,9 +1,9 @@
 <div class="card">
-  <div class="card-body">
+  <div class="card-body" id="post-message-box">
     <form class="form-group" id="new-post-form" action="/posts" method="post">
       <a id="posted-by-link" href="/users/{{user._id}}">{{user.name}}</a>
       <input id="message" type="text" name="message" placeholder="Share your thoughts with the Makerverse" value="">
-      <input class="btn btn-primary" type="submit" value="Submit">
+      <input class="btn" type="submit" id="submit" value="Submit">
     </form> 
   </div>
 </div>
