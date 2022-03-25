@@ -20,7 +20,7 @@
       <input id="add-friend" type="submit" class="btn" value="Add Friend">
   </form>
 {{/if}}
-    
+{{#if showUploadPhoto}}
     <form class="form-group" action="/users/upload/" method="POST">
         <div id="update-profile-pic" >Update profile picture</div>
         <div id="pic-uploader-button">
@@ -28,6 +28,7 @@
         <input type="submit" id="profile_pic_submit" class="btn btn-primary" value="Upload Photo" style="visibility: hidden;">
         </div>
     </form>
+ {{/if}}   
 
 <table>
   <tr>

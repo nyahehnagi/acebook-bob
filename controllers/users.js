@@ -59,11 +59,15 @@ const UsersController = {
 
   Show: (req, res) => {
     var showAddFriend = true
+    var showUploadPhoto = false
     // this allows viewing of a profile when not logged in
     const sessionUserId = typeof(req.session.user) == "undefined"  ? 0 : req.session.user._id
 
     if (sessionUserId == req.params.id || sessionUserId == 0) {
       showAddFriend = false
+    }
+    if (sessionUserId == req.params.id || sessionUserId == 0) {
+      showUploadPhoto = true
     }
 
     User.
@@ -87,7 +91,7 @@ const UsersController = {
           posts.forEach((post) => {
             post.createdOnPretty = post.formatDate(post.createdAt)
           })
-          res.render("users/show", { user: user, posts: posts, users: user.friends , showAddFriend : showAddFriend });
+          res.render("users/show", { user: user, posts: posts, users: user.friends, showAddFriend: showAddFriend, showUploadPhoto: showUploadPhoto});
         });
         
       })
