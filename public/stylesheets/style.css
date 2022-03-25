@@ -83,6 +83,7 @@ body {
 #navbar-title {
   color: azure;
   margin-left: -12%;
+  vertical-align: middle;
 }
 
 #navbar-title:hover {
@@ -112,8 +113,9 @@ body {
   text-align: center;
   margin-right: 3%;
 }
-#title-writing {
-  margin-left: -6.75%;
+
+#title-text {
+  margin-left: -91px;
 }
 
 #welcome-message {
@@ -386,4 +388,8 @@ ul {
   border: none;
   border-top-left-radius: 0%;
   border-top-right-radius: 0%;
+}
+
+.container {
+  display: flex;
 }
