@@ -1,30 +1,41 @@
-<h1 id="profile" class="profile">Profile of {{user.name}}</h1>
+<div class="card" id="friends-list-title">
+  <div class="card-title">
+    <h4>Friends</h4>
+  </div>
+</div>      
+  <div class="card" id="friends-list">
+    <div class="card-body">
+      <td valign="top">
+        {{> userList }}
+      </td>
+    </div>
+  </div>
+
+    <div class="center">
+      <img id="profile-pic" src="{{user.profilePicLocation}}" class="shrinkToFit" width="360" height="360">
+    </div>
+    <h1 id="profile" class="profile">{{user.name}}</h1>
+{{#if showAddFriend}}
+  <form id="add-friend-form" class="form-group" action="/users/{{user.id}}" method="POST">
+      <input id="add-friend" type="submit" class="btn" value="Add Friend">
+  </form>
+{{/if}}
+{{#if showUploadPhoto}}
+    <form class="form-group" action="/users/upload/" method="POST">
+        <div id="update-profile-pic" >Update profile picture</div>
+        <div id="pic-uploader-button">
+        <input type="hidden" name="profile_pic" id="profile_pic_uploader" class="simple-file-upload" data-width="50" data-height="50" data-accepted="image/jpeg" resize-method="crop"  data-resize-width="500" data-resize-height="500" >
+        <input type="submit" id="profile_pic_submit" class="btn btn-primary" value="Upload Photo" style="visibility: hidden;">
+        </div>
+    </form>
+ {{/if}}   
 
 <table>
   <tr>
     <td>
-    <div>
-      
-      <img id="profile-pic" src="{{user.profilePicLocation}}" class="shrinkToFit" width="360" height="360">
-      <h6>Upload Image</h6>
-      <form class="form-group" action="/users/upload/" method="POST">
-          <input type="hidden" name="profile_pic" id="profile_pic_uploader" class="simple-file-upload" data-width="50" data-height="50" data-accepted="image/jpeg" resize-method="crop"  data-resize-width="500" data-resize-height="500" >
-          <input type="submit" id="profile_pic_submit" class="btn btn-primary" value="Upload Photo" style="visibility: hidden;">
-      </form>
-    </div>
-    </td>
-    <td valign="top">
-      <h4>Friends</h4>
-      {{> userList }}
     </td>
   </tr>
 </table>
-{{#if showAddFriend}}
-  <form id="add-friend-form" class="form-group" action="/users/{{user.id}}" method="POST">
-      <input id="add-friend" type="submit" class="btn btn-primary" value="Add Friend">
-  </form>
-{{/if}}
-<h1>Timeline</h1>
 {{> postList }}
 
 <script>

@@ -4,27 +4,104 @@ body {
   background-color: #04504817;
 }
 
-a {
-  color: azure;
+.accordion-item {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    margin-left: 280%;
+    width: 12rem;
+    border: #ffffff;
+}
+#accordion-collapse {
+  margin-left: -420%;
+}
+.accordion-body {
+  width: 70rem;
+  margin-left: -472%;
 }
 
-.accordion-item {
-  align-items: flex-end;
+#post-message-box {
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+  width: 50rem;
+  border-radius: 20px;
+}
+
+/*box for posting a status*/
+#message {
+  width: 25rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: solid #679491;
+  margin-top: 1%;
+}
+#commentMessage {
+  width: 25rem;
+  height: 2rem;
+  border-radius: 10px;
+  margin-left: 35px;
+  border: solid #679491;
+}
+
+#likeForm {
+  margin-top: 15px;
+  position: absolute;
+}
+
+.card-text {
+  font-size: large;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  margin-left: 60px;
 }
 
 #comments {
-  color:red
+  color:#045049;
+  border: 2.75px solid #679491; 
+  border-radius: 15px;
+  padding: 10px;
+  /* margin-left: 50px;
+  margin-right: 70px; */
+  margin: 0 auto;
+  margin-bottom: 5px;
+  width: 63rem;
 }
 #createdAt {
-  color:green
+  color:#045049;
+  display: inline-block;
+  margin-left: 63%;
 }
 
 #numberOfLikes {
   display: inline-block;
+  font-weight: bolder;
+  color: #045049;
+}
+
+#navbar-title {
+  color: azure;
+  margin-left: -12%;
 }
 
 #navbar-title:hover {
   color: #aef0de;
+}
+
+#welcome-user {
+  color: azure;
+  cursor: default;
+  text-align: right;
+  width: 41rem
+}
+
+#search-button {
+  background-color: #78a5a1;
+  color: #045049;
+}
+#search-button:hover {
+  color: #ffffff;
 }
 
 #title {
@@ -33,10 +110,15 @@ a {
   font-family: 'monospace', 'monaco';
   margin-top: 4%;
   text-align: center;
+  margin-right: 3%;
+}
+#title-writing {
+  margin-left: -6.75%;
 }
 
 #welcome-message {
   text-align: center;
+  font-size: medium;
 }
 
 #modalSignin {
@@ -46,6 +128,26 @@ a {
 #submit {
   background-color: #045049;
   color: azure;
+}
+#submit:hover {
+  background-color: #78a5a1;
+}
+
+#submitComment {
+  background-color: #045049;
+  color: azure;
+}
+#submitComment:hover {
+  background-color: #78a5a1;
+}
+
+#submitLike {
+  background-color: #045049;
+  color: azure;
+  border-radius: 8px;
+}
+
+#submitLike:hover {
 }
 
 #signup-button:hover {
@@ -60,15 +162,224 @@ a {
 #home {
   color: azure;
 }
+#home:hover {
+  color: #aef0de;
+}
 #signup {
   color:azure;
+}
+#signup:hover {
+  color: #aef0de;
 }
 #login {
   color: azure;
 }
+#login:hover {
+  color: #aef0de;
+}
 #logout {
   color: azure;
 }
+#logout:hover {
+  color: #aef0de;
+}
 #view-profile {
   color: azure;
+}
+#view-profile:hover {
+  color: #aef0de;
+}
+
+#post-profile-pic {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#posted-by-link {
+  font-weight: bold;
+  /* position: absolute; */
+  margin-top: 35px;
+  margin-left: 10px;
+  font-size: x-large;
+  color: #045049;
+  text-decoration: none;
+}
+#posted-by-link:hover {
+  color: #679491
+}
+
+#poster-link {
+  font-size: x-large;
+  color: #045049;
+  text-decoration: none;
+}
+#poster-link:hover {
+  color: #679491
+}
+
+#commented-by-link {
+  /* position: absolute; */
+  margin-top: 35px;
+  margin-left: 10px;
+  font-size: large;
+  color: #045049;
+  text-decoration: none;
+  font-weight: bold;
+}
+#commented-by-link:hover {
+  color: #679491;  
+}
+#comment-profile-pic {
+  border-radius: 50%;
+  margin-bottom: 6px;
+  margin-right: -8px;
+}
+
+#comment-message {
+  font-size: medium;
+  margin-left: 0.5%;
+}
+
+#timeline {
+  text-align: center;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  color: #04504861;
+  font-size: x-large;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    width: 70rem;
+    border-radius: 20px;
+}
+
+#profile {
+  color: #045049;
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* .form-control-file {
+  background-color: #045049;
+  color: azure;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+} */
+
+/* #upload-file {
+  background-color: #045049;
+  color: azure;
+} */
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 28%;
+}
+
+#profile-pic {
+  border-radius: 50%;
+  margin-top: 25px;
+}
+
+.form-group {
+  text-align: center;
+}
+
+#update-profile-pic {
+  font-size: medium;
+  margin-top: 30px;
+  color: #045049;
+  text-align: center;
+}
+
+#pic-uploader-button {
+  margin-top: 10px;
+  margin-left: 130px;
+  margin-right: auto;
+}
+
+#friend-profile {
+  margin-top: 100px;
+  font-size: medium;
+  color: #045049;
+  text-decoration: none;
+}
+
+#add-friend {
+  background-color: #045049;
+  color: azure;
+}
+#add-friend:hover {
+  background-color: #78a5a1;
+}
+
+#friends-list-title {
+  width: 18rem;
+  border: none;
+  padding-top: 30px;
+  width: 20rem;
+  max-height: 30rem;
+  margin-top: 50px;
+  margin-bottom: -60px;
+  margin-left: 40px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  text-indent: 5%;
+  color: #045049;
+}
+
+#friends-list {
+  color: #045049;
+  position: absolute;
+  width: 20rem;
+  max-height: 30rem;
+  margin-top: 50px;
+  margin-left: 40px;
+  overflow: auto; 
+  border: none;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
+
+#view-friend-profile {
+  font-size: medium;
+  color: #045049;
+  text-decoration: none;
+}
+
+#users-found-title {
+  width: 18rem;
+  border: none;
+  padding-top: 30px;
+  width: 20rem;
+  max-height: 30rem;
+  margin-top: 50px;
+  margin-bottom: -60px;
+  margin-left: 40px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  text-indent: 5%;
+  color: #045049;
+}
+#users-list {
+  color: #045049;
+  position: absolute;
+  width: 20rem;
+  max-height: 30rem;
+  margin-top: 50px;
+  margin-left: 40px;
+  overflow: auto; 
+  border: none;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
 }

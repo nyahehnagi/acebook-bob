@@ -8,19 +8,33 @@ describe("Timeline", () => {
 
     // submit a post
     cy.visit("/posts");
-    cy.contains("New post").click();
+    // cy.contains("New post").click();
 
     cy.get("#new-post-form").find('[type="text"]').type("Hello, world!");
-    cy.get("#new-post-form").submit();
+    cy.get("#submit").click();
 
     cy.get("#posts").should("contain", "Hello, world!");
-    cy.get("#postedBy").should("contain", "test name");
+    cy.get("#posted-by-link").should("contain", "test name");
 
-    // Extract date/time from page in variable
+    // 1. Extract date/time from page in variable
     cy.get('#createdAt').then(($createdAt) => {
-      const timeSincePosted = parseInt($createdAt.text().slice(0, -1));
-      // Check if less than 10 seconds
-      cy.wrap(timeSincePosted).should('be.lt', 10);
+      cy.log('$createdAt:' +$createdAt.text());
+
+      // 2. Convert date/time string to Date format
+      
+      const postedTime = Date.parse($createdAt.text());
+      cy.log('postedTime:' +postedTime);
+
+      // 3. Store curent date/time in variable
+      const currentTime = Date.now();
+      cy.log('currentTime:' +currentTime);
+
+      // 4. Get difference in time in seconds
+      const differenceInSeconds = currentTime - postedTime;
+      cy.log('differenceInSeconds:' +differenceInSeconds);
+
+      // 5. Check if less than 50 seconds
+      cy.wrap(differenceInSeconds).should('be.lt', 5000);
     });
 
   });
@@ -29,11 +43,11 @@ describe("Timeline", () => {
     cy.signUp()
 
     cy.visit("/posts");
-    cy.contains("New post").click();
+    // cy.contains("New post").click();
 
     cy.get("#new-post-form").find('[type="text"]').type("Hello, world!");
-    cy.get("#new-post-form").submit();
-    cy.get('#postedByLink').eq(0).click()
+    cy.get("#submit").click();
+    cy.get('#posted-by-link').eq(0).click()
 
     cy.get("#profile").should("contain", "test name");
   })

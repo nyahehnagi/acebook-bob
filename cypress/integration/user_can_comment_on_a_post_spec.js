@@ -1,9 +1,9 @@
 describe("comment on a post", () => {
     xit('user comments on a post', () => {
         cy.signUp()
-        cy.contains("New post").click();
+        // cy.contains("New post").click();
         cy.get("#new-post-form").find('[type="text"]').type("Hello, world!");
-        cy.get("#new-post-form").submit();
+        cy.get("#submit").click();
         cy.get("#collapse-button").first().click();
         cy.get("#new-comment-form").find('[type="text"]').type("This is a comment on a post.");
         cy.get("#submitComment").click();

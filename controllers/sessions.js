@@ -13,9 +13,9 @@ const SessionsController = {
 
     User.findOne({ email: email }).then((user) => {
       if (!user) {
-        res.redirect("/sessions/new");
+        res.redirect("/");
       } else if (bcrypt.compareSync(password, user.password) == false) {
-        res.redirect("/sessions/new");
+        res.redirect("/");
       } else {
         req.session.user = user;
         res.redirect("/posts");

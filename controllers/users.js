@@ -52,24 +52,29 @@ const UsersController = {
         if (err) {
           throw err
         }
+      
+      user = req.session.user  
 
-        res.render("users/index", { users: users})
+        res.render("users/index", { users: users, user: user})
       })
   },
 
   Show: (req, res) => {
     var showAddFriend = true
+    var showUploadPhoto = false
     // this allows viewing of a profile when not logged in
     const sessionUserId = typeof(req.session.user) == "undefined"  ? 0 : req.session.user._id
 
     if (sessionUserId == req.params.id || sessionUserId == 0) {
       showAddFriend = false
     }
+    if (sessionUserId == req.params.id || sessionUserId == 0) {
+      showUploadPhoto = true
+    }
 
     User.
       findOne({_id: req.params.id }).
       populate('friends').
-      populate('posts').
       exec (function (err, user){
         if (err) throw err;
         if (!user) { return res.status(404).send("Not Found") } 
@@ -78,11 +83,19 @@ const UsersController = {
           if (friend.id == sessionUserId){showAddFriend = false}
         })
 
-        user.posts.forEach((post) => {
-          post.createdOnPretty = post.formatDate(post.createdAt)
-        })
-
-        res.render("users/show", { user: user, posts: user.posts, users: user.friends , showAddFriend : showAddFriend });
+        Post.
+          find().
+          where('_id').in(user.posts).
+          populate('userObjectId').
+          populate('comments.commenterId').
+          exec((err, posts) => {
+          if (err) throw err;
+          posts.forEach((post) => {
+            post.createdOnPretty = post.formatDate(post.createdAt)
+          })
+          res.render("users/show", { user: user, posts: posts, users: user.friends, showAddFriend: showAddFriend, showUploadPhoto: showUploadPhoto});
+        });
+        
       })
 
   },

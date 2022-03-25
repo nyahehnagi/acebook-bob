@@ -3,9 +3,9 @@ describe("liking a post twice", () => {
 it('user can like a post once only', () => { 
       
   cy.signUp()
-  cy.contains("New post").click();
+  // cy.contains("New post").click();
   cy.get("#new-post-form").find('[type="text"]').type("Test");
-  cy.get("#new-post-form").submit();
+  cy.get("#submit").click();
 
   cy.get("#likeForm").submit();
 
