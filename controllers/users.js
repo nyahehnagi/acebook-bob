@@ -52,8 +52,10 @@ const UsersController = {
         if (err) {
           throw err
         }
+      
+      user = req.session.user  
 
-        res.render("users/index", { users: users})
+        res.render("users/index", { users: users, user: user})
       })
   },
 
