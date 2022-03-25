@@ -39,13 +39,13 @@ module.exports = (on, config) => {
       db.on('open', function() {
 
         User.deleteMany({}).then( () => {
-          console.log("User Test Data Deleted");
+          //console.log("User Test Data Deleted");
         }).catch(function(error){
           console.log(error); 
         });
 
         Post.deleteMany({}).then(function(){
-          console.log("Post Test Data Deleted");
+          //console.log("Post Test Data Deleted");
         }).catch(function(error){
           console.log(error); 
         });
