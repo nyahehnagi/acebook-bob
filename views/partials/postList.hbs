@@ -14,7 +14,7 @@
       <div class="card-body">
         <img id="post-profile-pic" src="{{this.userObjectId.profilePicLocation}}" class="shrinkToFit" style="border-radius: 50%" width="50" height="50">
         <a id="posted-by-link" href="/users/{{this.userObjectId.id}}">{{this.userObjectId.name}}</a>
-        <div id="createdAt">{{this.createdOnPretty}}</div>
+        <p id="createdAt"> posted {{this.createdOnPretty}} ago</p>
         <p class="card-text">{{this.message}}</p>
     <br>
     {{!-- Posted at: <div id="createdAt">{{this.createdOnPretty}}</div> --}}

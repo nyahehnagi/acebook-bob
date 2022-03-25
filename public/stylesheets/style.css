@@ -35,6 +35,7 @@ body {
   height: 2rem;
   border-radius: 5px;
   border: solid #679491;
+  margin-top: 1%;
 }
 #commentMessage {
   width: 25rem;
@@ -70,6 +71,7 @@ body {
 #createdAt {
   color:#045049;
   display: inline-block;
+  margin-left: 63%;
 }
 
 #numberOfLikes {
@@ -142,10 +144,10 @@ body {
 #submitLike {
   background-color: #045049;
   color: azure;
-  border-radius: 50%;
+  border-radius: 8px;
 }
+
 #submitLike:hover {
-  background-color: #78a5a1;
 }
 
 #signup-button:hover {
@@ -242,7 +244,7 @@ body {
   text-align: center;
   margin-top: 1.5%;
   margin-bottom: 1.5%;
-  color: #045049;
+  color: #04504861;
   font-size: x-large;
 }
 
