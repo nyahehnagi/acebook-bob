@@ -321,6 +321,34 @@ ul {
   background-color: #78a5a1;
 }
 
+#friends-list-title {
+  width: 18rem;
+  border: none;
+  padding-top: 30px;
+  width: 20rem;
+  max-height: 30rem;
+  margin-top: 50px;
+  margin-bottom: -60px;
+  margin-left: 40px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  text-indent: 5%;
+  color: #045049;
+}
+
+#friends-list {
+  color: #045049;
+  position: absolute;
+  width: 20rem;
+  max-height: 30rem;
+  margin-top: 50px;
+  margin-left: 40px;
+  overflow: auto; 
+  border: none;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
+
 #view-friend-profile {
   font-size: medium;
   color: #045049;

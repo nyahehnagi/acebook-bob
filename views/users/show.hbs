@@ -1,8 +1,19 @@
+<div class="card" id="friends-list-title">
+  <div class="card-title">
+    <h4>Friends</h4>
+  </div>
+</div>      
+  <div class="card" id="friends-list">
+    <div class="card-body">
+      <td valign="top">
+        {{> userList }}
+      </td>
+    </div>
+  </div>
 
     <div class="center">
       <img id="profile-pic" src="{{user.profilePicLocation}}" class="shrinkToFit" width="360" height="360">
     </div>
-    
     <h1 id="profile" class="profile">{{user.name}}</h1>
 {{#if showAddFriend}}
   <form id="add-friend-form" class="form-group" action="/users/{{user.id}}" method="POST">
@@ -21,10 +32,6 @@
 <table>
   <tr>
     <td>
-    </td>
-    <td valign="top">
-      <h4>Friends</h4>
-      {{> userList }}
     </td>
   </tr>
 </table>
