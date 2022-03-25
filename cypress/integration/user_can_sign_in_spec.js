@@ -13,6 +13,6 @@ describe("Authentication", () => {
     cy.get("#submit").click();
 
     cy.url().should("include", "/posts");
-    cy.contains("a", "New post");
+    cy.get('#message').invoke('attr', 'placeholder').should('contain', '  Share your thoughts with the Makerverse...')
   });
 });
