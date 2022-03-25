@@ -11,20 +11,15 @@ describe("Search for users", () => {
   })
 
   it('searches for a user and finds two matches', () => {
-    cy.get("#signup").click();
-    cy.get("#email").type("another@example.com");
-    cy.get("#password").type("password");
-    cy.get("#name").type("another tester")
-    cy.get("#submit").click();
+    cy.signUpSecondUser()
 
-
-    cy.get("#search").type("test");
+    cy.get("#search").type("name");
     cy.get("#search-form").submit();
 
     cy.url().should("include", "/users");
 
     cy.get("#users").first().should("contain", "test name");
-    cy.get("#users").last().should("contain", "another tester");
+    cy.get("#users").last().should("contain", "another name");
 })
 
 })
