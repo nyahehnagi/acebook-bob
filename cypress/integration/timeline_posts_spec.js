@@ -16,25 +16,12 @@ describe("Timeline", () => {
     cy.get("#posts").should("contain", "Hello, world!");
     cy.get("#posted-by-link").should("contain", "test name");
 
-    // 1. Extract date/time from page in variable
+    // Extract date/time from page in variable
     cy.get('#createdAt').then(($createdAt) => {
-      cy.log('$createdAt:' +$createdAt.text());
+      const timeSincePosted = parseInt($createdAt.text().slice(0, -5).slice(7) );
 
-      // 2. Convert date/time string to Date format
-      
-      const postedTime = Date.parse($createdAt.text());
-      cy.log('postedTime:' +postedTime);
-
-      // 3. Store curent date/time in variable
-      const currentTime = Date.now();
-      cy.log('currentTime:' +currentTime);
-
-      // 4. Get difference in time in seconds
-      const differenceInSeconds = currentTime - postedTime;
-      cy.log('differenceInSeconds:' +differenceInSeconds);
-
-      // 5. Check if less than 50 seconds
-      cy.wrap(differenceInSeconds).should('be.lt', 5000);
+      // Check if less than 10 seconds
+      cy.wrap(timeSincePosted).should('be.lt', 10);
     });
 
   });
