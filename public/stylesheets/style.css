@@ -160,6 +160,18 @@ body {
 #navBar {
   background-color: #045049;
 }
+.navbar-toggler {
+  border: 1px;
+}
+.navbar-toggler-icon {
+  background-color: azure;
+  height: 3px;
+  margin-bottom: -10px 0;
+  width: 30px;
+}
+#space {
+  line-height: 10px;
+}
 
 #home {
   color: azure;
